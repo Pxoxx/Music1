@@ -67,7 +67,7 @@ async def ytdl(link):
         return 1, stdout.decode().split("\n")[0]
     else:
         return 0, stderr.decode()
-@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تشغيل"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["ش"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def play(client, m: Message):
     replied = m.reply_to_message
@@ -164,7 +164,7 @@ async def play(client, m: Message):
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
-@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تشغيل_فيديو"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["فيد"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def vplay(client, m: Message):
     replied = m.reply_to_message
